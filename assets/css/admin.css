@@ -1,0 +1,354 @@
+/* ==========================================================================
+   Admin Executive Command Center - Ultra-Elegant Dashboard Styling
+   Smart Tax Planning Assistance
+   ========================================================================== */
+
+:root {
+    --admin-primary: #4f46e5;
+    --admin-primary-dark: #3730a3;
+    --admin-primary-light: #e0e7ff;
+    --admin-accent: #06b6d4;
+    --admin-emerald: #10b981;
+    --admin-amber: #f59e0b;
+    --admin-rose: #f43f5e;
+    --admin-slate-dark: #0f172a;
+    --admin-card-bg: rgba(255, 255, 255, 0.92);
+    --admin-card-border: rgba(226, 232, 240, 0.85);
+    --admin-glow: 0 10px 30px -10px rgba(79, 70, 229, 0.15);
+}
+
+/* Executive Hero Banner */
+.admin-hero-banner {
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 45%, #312e81 100%);
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 2.25rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-hero-banner::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, rgba(6, 182, 212, 0.08) 50%, transparent 70%);
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+.admin-pulse-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #10b981;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 0 rgba(16, 185, 129, 0.6);
+    animation: adminPulse 2s infinite;
+}
+
+@keyframes adminPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+}
+
+/* Premium KPI Stat Cards */
+.admin-stat-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.6rem;
+    border: 1px solid var(--admin-card-border);
+    box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.admin-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px -8px rgba(79, 70, 229, 0.12);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+.admin-stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--admin-primary), var(--admin-accent));
+    opacity: 0;
+    transition: opacity 0.28s ease;
+}
+
+.admin-stat-card:hover::before {
+    opacity: 1;
+}
+
+.admin-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.admin-icon-indigo {
+    background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+    color: #4338ca;
+}
+
+.admin-icon-emerald {
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+    color: #065f46;
+}
+
+.admin-icon-amber {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    color: #92400e;
+}
+
+.admin-icon-cyan {
+    background: linear-gradient(135deg, #cffafe, #a5f3fc);
+    color: #155e75;
+}
+
+.admin-icon-rose {
+    background: linear-gradient(135deg, #ffe4e6, #fecdd3);
+    color: #9f1239;
+}
+
+.admin-stat-value {
+    font-size: 2.1rem;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+    color: #0f172a;
+    line-height: 1.1;
+}
+
+/* Glassmorphism Action Tiles */
+.admin-quick-action {
+    background: #ffffff;
+    border: 1px solid var(--admin-card-border);
+    border-radius: 14px;
+    padding: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: #1e293b;
+    transition: all 0.22s ease;
+}
+
+.admin-quick-action:hover {
+    background: #f8fafc;
+    border-color: var(--admin-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px -4px rgba(79, 70, 229, 0.1);
+    color: var(--admin-primary);
+}
+
+.admin-action-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    background: #f1f5f9;
+    color: var(--admin-primary);
+    transition: all 0.22s;
+}
+
+.admin-quick-action:hover .admin-action-icon {
+    background: var(--admin-primary);
+    color: #ffffff;
+}
+
+/* Modern Audit Timeline */
+.admin-timeline {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.admin-timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: #e2e8f0;
+}
+
+.admin-timeline-item {
+    position: relative;
+    padding-bottom: 1.4rem;
+}
+
+.admin-timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.admin-timeline-dot {
+    position: absolute;
+    left: -1.5rem;
+    top: 4px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 3px solid var(--admin-primary);
+    box-shadow: 0 0 0 3px #e0e7ff;
+}
+
+.admin-timeline-dot.success {
+    border-color: var(--admin-emerald);
+    box-shadow: 0 0 0 3px #d1fae5;
+}
+
+.admin-timeline-dot.warning {
+    border-color: var(--admin-amber);
+    box-shadow: 0 0 0 3px #fef3c7;
+}
+
+/* Diagnostic Progress Meters */
+.telemetry-progress {
+    height: 8px;
+    border-radius: 10px;
+    background-color: #f1f5f9;
+    overflow: hidden;
+}
+
+.telemetry-progress-bar {
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--admin-primary), var(--admin-accent));
+}
+
+/* Chart Canvas Wrapper */
+.admin-chart-box {
+    position: relative;
+    height: 310px;
+    width: 100%;
+}
+
+/* Glassmorphic Panel Container */
+.admin-glass-panel {
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid var(--admin-card-border);
+    box-shadow: 0 4px 25px -4px rgba(15, 23, 42, 0.06);
+    transition: all 0.25s ease;
+    overflow: hidden;
+}
+
+.admin-glass-panel:hover {
+    box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08);
+}
+
+.admin-glass-panel-header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #f1f5f9;
+    background: #fafbfc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin-glass-panel-body {
+    padding: 1.5rem;
+}
+
+/* Dark Telemetry Console Card */
+.admin-console-card {
+    background: #0f172a;
+    color: #f8fafc;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.25);
+}
+
+.admin-console-card .text-muted {
+    color: #94a3b8 !important;
+}
+
+.admin-console-divider {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Badge Glow & Chips */
+.admin-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.28rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.admin-chip-indigo {
+    background: #e0e7ff;
+    color: #4338ca;
+}
+
+.admin-chip-emerald {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.admin-chip-amber {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.admin-chip-cyan {
+    background: #cffafe;
+    color: #0e7490;
+}
+
+.admin-chip-dark {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Gradient Text Effect */
+.admin-gradient-text {
+    background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Executive Metric Grid Item */
+.admin-metric-subtext {
+    font-size: 0.8125rem;
+    color: #64748b;
+    margin-top: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.admin-metric-subtext i {
+    font-size: 0.9rem;
+}
+
